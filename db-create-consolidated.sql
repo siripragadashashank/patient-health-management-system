@@ -16,7 +16,7 @@ Drop table if exists dbo.LabResultDetails;
 Drop table if exists dbo.VitalSigns;
 Drop table if exists dbo.VitalSignDetails;
 
-Drop table if exists dbo.Symptom;
+Drop table if exists dbo.Symptoms;
 Drop table if exists dbo.SymptomDetail;
 
 Drop table if exists dbo.Billing;
@@ -52,16 +52,14 @@ HealthCareProviderID INT PRIMARY KEY,
 Designation VARCHAR(45),
 EmpFirstName VARCHAR(45),
 EmpLastName VARCHAR(45),
-EmpContactNo INT,
+EmpContactNo INT
 );
 
  CREATE TABLE PatientEncounter
 (
 PatEncID INT PRIMARY KEY, 
-PatID INT NOT NULL
-REFERENCES Patient(PatID),
-HealthCareProviderID INT NOT NULL
-REFERENCES HealthCareProvider(HealthCareProviderID),
+PatID INT NOT NULL REFERENCES Patient(PatID),
+HealthCareProviderID INT NOT NULL REFERENCES HealthCareProvider(HealthCareProviderID),
 PatEncAdmitDate DateTime,
 AdmitType VARCHAR(45),
 AdmitLocation VARCHAR(45),
@@ -77,18 +75,12 @@ SymName VARCHAR(45)
 );
 
 
-
-CREATE TABLE Symptom
+CREATE TABLE Symptoms
 (
-PatEncID INT NOT NULL
-REFERENCES PatientEncounter(PatEncID),
-SymCode INT NOT NULL
-REFERENCES SymptomDetail(SymCode),
+PatEncID INT NOT NULL REFERENCES PatientEncounter(PatEncID),
+SymCode INT NOT NULL REFERENCES SymptomDetail(SymCode),
 Duration INT
 );
-
-
-
 
 
 create table DiagnosisDetails
@@ -115,14 +107,12 @@ Price DOUBLE PRECISION
 
 CREATE TABLE LabResults
 (
-PatEncID INT NOT NULL
-REFERENCES PatientEncounter(PatEncID), 
-HealthCareProviderID INT NOT NULL
-REFERENCES HealthCareProvider(HealthCareProviderID),
-TestID INT  NOT NULL REFERENCES LabResultDetails(TestID),
+PatEncID INT NOT NULL REFERENCES PatientEncounter(PatEncID), 
+HealthCareProviderID INT NOT NULL REFERENCES HealthCareProvider(HealthCareProviderID),
+TestID INT NOT NULL REFERENCES LabResultDetails(TestID),
 StoreTime Date,
-Val Double PRECISION,
-ValNum INT
+Val varchar(45),
+ValNum double precision
 );
 
 
@@ -135,10 +125,8 @@ VitalUnit VARCHAR(45)
 
 CREATE TABLE VitalSigns
 (
-PatEncID INT  NOT NULL
-REFERENCES PatientEncounter(PatEncID),
-VitalID INT NOT NULL
-REFERENCES VitalSignDetails(VitalID),
+PatEncID INT  NOT NULL REFERENCES PatientEncounter(PatEncID),
+VitalID INT NOT NULL REFERENCES VitalSignDetails(VitalID),
 StoreTime DATETIME,
 VitalVal VARCHAR(45),
 VitalValNum DOUBLE PRECISION
@@ -152,24 +140,17 @@ MedName VARCHAR(45),
 MedPrice DOUBLE PRECISION
 );
 
-
-
  CREATE TABLE Prescription
 (
 PrescriptionID INT PRIMARY KEY, 
-MedID INT NOT NULL
-REFERENCES MedicationDetails(MedID),
-PatEncID INT NOT NULL
-REFERENCES PatientEncounter(PatEncID),
-HealthCareProviderID INT NOT NULL
-REFERENCES HealthCareProvider(HealthCareProviderID),
+MedID INT NOT NULL REFERENCES MedicationDetails(MedID),
+PatEncID INT NOT NULL REFERENCES PatientEncounter(PatEncID),
+HealthCareProviderID INT NOT NULL REFERENCES HealthCareProvider(HealthCareProviderID),
 PrescStartDate DATETIME,
 PrescEndDate DATETIME,
 PrescDose FLOAT,
 PrescQty FLOAT
 );
-
-
 
 CREATE TABLE Billing
 (
@@ -179,4 +160,42 @@ REFERENCES PatientEncounter(PatEncID),
 OrderTotal DOUBLE PRECISION,
 PaymentStatus VARCHAR(45),
 ClaimSanctionAmt DOUBLE PRECISION
+);
+
+CREATE TABLE PatientDemographics
+(
+PatID INT NOT NULL REFERENCES Patient(PatID),
+Gender VARCHAR(45),
+Race VARCHAR(45),
+Ethnicity VARCHAR(45),
+MaritalStatus VARCHAR(45),
+EmploymentStatus VARCHAR(45)
+);
+
+Create table Vaccination
+(
+LotNo int Primary key,
+PatID INT NOT NULL REFERENCES Patient(PatID),
+VaccinationStatus VARCHAR(45),
+NoOfDoses int,
+VaccineName  VARCHAR(45),
+BoosterStatus VARCHAR(45)
+);
+
+
+CREATE TABLE EPOC
+(
+EPOCID int Primary key,
+PatID INT NOT NULL REFERENCES Patient(PatID),
+EPOCFirstName VARCHAR(45),
+EPOCLastName VARCHAR(45),
+EPOCPhoneNo INTEGER
+);
+
+create table InsuranceProvider
+(
+InsuranceProviderID int primary key,
+PatID INT NOT NULL REFERENCES Patient(PatID),
+InsuranceProviderName VARCHAR(45),
+PatientInsuranceNo Int
 );
