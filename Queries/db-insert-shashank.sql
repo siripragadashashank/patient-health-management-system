@@ -35,3 +35,37 @@ insert into Patient(PatID, FirstName, LastName, DoB, Street, City, State, ZipCod
 insert into Patient(PatID, FirstName, LastName, DoB, Street, City, State, ZipCode, PhoneNo, EmailAddress) values (129, 'Tracy' ,'Peterson','1988-02-08', '4976 McKinley Avenue', 'Denver', 'Colorado',80202,3038072071, 'tracy.peterson@gmail.com');
 insert into Patient(PatID, FirstName, LastName, DoB, Street, City, State, ZipCode, PhoneNo, EmailAddress) values (130, 'Amy' ,'Martin','1992-11-16', '2078 Red Dog Road', 'Charlotte', 'North Carolina',28202,7043395859, 'amy.martin@gmail.com');
 
+----------------------------------------------PatientDemographics----------------------------------------------------------------
+
+
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (101, 'M','Other', 'Non Hispanic', 'Unavailable', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (102, 'M','Other', 'Unavailable', 'Married', 'Retired');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (103, 'M','Black', 'Hispanic', 'Single', 'Unavailable');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (104, 'M','Black', 'Hispanic', 'Single', 'Unavailable');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (105, 'M','Asian', 'Unavailable', 'Married', 'Employed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (106, 'M','White', 'Non Hispanic', 'Single', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (107, 'M','Black', 'Hispanic', 'Unavailable', 'Retired');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (108, 'M','Unavailable', 'Hispanic', 'Unavailable', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (109, 'M','White', 'Non Hispanic', 'Divorced', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (110, 'M','Unavailable', 'Non Hispanic', 'Unavailable', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (111, 'M','White', 'Hispanic', 'Single', 'Employed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (112, 'M','Unavailable', 'Hispanic', 'Married', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (113, 'M','Asian', 'Hispanic', 'Married', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (114, 'M','Asian', 'Non Hispanic', 'Single', 'Unavailable');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (115, 'M','Unavailable', 'Unavailable', 'Single', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (116, 'F','Asian', 'Non Hispanic', 'Single', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (117, 'F','Unavailable', 'Unavailable', 'Single', 'Employed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (118, 'F','White', 'Hispanic', 'Single', 'Unavailable');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (119, 'F','Asian', 'Unavailable', 'Single', 'Retired');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (120, 'F','White', 'Non Hispanic', 'Unavailable', 'Employed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (121, 'F','Asian', 'Hispanic', 'Divorced', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (122, 'F','Black', 'Unavailable', 'Single', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (123, 'F','Asian', 'Non Hispanic', 'Single', 'Retired');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (124, 'F','Other', 'Non Hispanic', 'Unavailable', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (125, 'F','Black', 'Non Hispanic', 'Unavailable', 'Retired');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (126, 'F','Asian', 'Unavailable', 'Divorced', 'Employed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (127, 'F','Unavailable', 'Non Hispanic', 'Divorced', 'Employed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (128, 'F','White', 'Hispanic', 'Married', 'Retired');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (129, 'F','Asian', 'Unavailable', 'Married', 'Unemployed');
+insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (130, 'F','Unavailable', 'Non Hispanic', 'Divorced', 'Unemployed');
+

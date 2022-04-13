@@ -1,0 +1,14 @@
+
+---- Patient ---
+
+=concatenate("insert into ", A2, "(", "PatID,", " FirstName,", " LastName,", " DoB,", " Street,", " City,", " State,", " ZipCode,", " PhoneNo,", " EmailAddress", ")", " values (", B2, ", ", "'"& C2 &"'", " ,", "'"& D2 &"'", ",", "'"& TEXT(E2, "yyyy-mm-dd") &"'", ", ", "'"& F2 &"'", ", ", "'"& G2 &"'", ", ", "'"& H2 &"'", ",", I2, ",", J2, ", ", "'"& K2 &"'", ");")
+
+---- DiagnosisDetails ---
+
+
+=concatenate("insert into DiagnosisDetails",  "(", "DxCode,", " DxName)" ," values (", A2, ", ", "'"& B2 &"'",");")
+
+---- PatientDemographics ---
+
+=concatenate("insert into PatientDemographics",  "(", "PatID,", " Gender,", " Race,", " Ethnicity,", " MaritalStatus,", " EmploymentStatus)" ," values (", A2, ", ", "'"& B2 &"'", ",", "'"& C2 &"'", ", ", "'"& D2 &"'", ", ", "'"& E2 &"'", ", ", "'"& F2 &"'", ");")
+
