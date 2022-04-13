@@ -17,7 +17,7 @@ Drop table if exists dbo.VitalSigns;
 Drop table if exists dbo.VitalSignDetails;
 
 Drop table if exists dbo.Symptoms;
-Drop table if exists dbo.SymptomDetail;
+Drop table if exists dbo.SymptomDetails;
 
 Drop table if exists dbo.Billing;
 Drop table if exists dbo.Prescription;
@@ -41,7 +41,7 @@ Street VARCHAR(45),
 City VARCHAR(45),
 State VARCHAR(45),
 ZipCode INT,
-PhoneNo INT, 
+PhoneNo BIGINT, 
 EmailAddress VARCHAR(45),
 );
 
@@ -68,7 +68,7 @@ DiscLocation VARCHAR(45),
 );
 
 
-CREATE TABLE SymptomDetail
+CREATE TABLE SymptomDetails
 (
 SymCode INT PRIMARY KEY, 
 SymName VARCHAR(45)
@@ -78,7 +78,7 @@ SymName VARCHAR(45)
 CREATE TABLE Symptoms
 (
 PatEncID INT NOT NULL REFERENCES PatientEncounter(PatEncID),
-SymCode INT NOT NULL REFERENCES SymptomDetail(SymCode),
+SymCode INT NOT NULL REFERENCES SymptomDetails(SymCode),
 Duration INT
 );
 
