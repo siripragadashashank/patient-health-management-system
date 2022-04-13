@@ -188,7 +188,7 @@ EPOCID int Primary key,
 PatID INT NOT NULL REFERENCES Patient(PatID),
 EPOCFirstName VARCHAR(45),
 EPOCLastName VARCHAR(45),
-EPOCPhoneNo INTEGER
+EPOCPhoneNo BIGINT
 );
 
 create table InsuranceProvider
