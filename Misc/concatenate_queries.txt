@@ -12,3 +12,8 @@
 
 =concatenate("insert into PatientDemographics",  "(", "PatID,", " Gender,", " Race,", " Ethnicity,", " MaritalStatus,", " EmploymentStatus)" ," values (", A2, ", ", "'"& B2 &"'", ",", "'"& C2 &"'", ", ", "'"& D2 &"'", ", ", "'"& E2 &"'", ", ", "'"& F2 &"'", ");")
 
+
+
+------ Vaccination ------
+
+=concatenate("insert into Vaccination(", "LotNo,",	" PatID,",	" VaccinationStatus,", " NoOfDoses,",	" VaccineName,", " BoosterStatus)", " values (", A2, ", ", B2, ", ", "'"& C2 &"'", ", ", D2, ", ",  

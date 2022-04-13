@@ -1,5 +1,5 @@
 ---------------------------------------------------Insert---------------------------------------------------------------------
-
+use PHMS;
 
 
 --------------------------------------Patient--------------------------------------------------------------------------------
@@ -69,3 +69,74 @@ insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, E
 insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (129, 'F','Asian', 'Unavailable', 'Married', 'Unemployed');
 insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (130, 'F','Unavailable', 'Non Hispanic', 'Divorced', 'Unemployed');
 
+------------------------------------------ Vaccination
+
+
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1001, 101, 'Vaccinated', 3, 'Covid-19', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1002, 101, 'Vaccinated', 1, 'Influenza', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1003, 101, 'Unvaccinated', 0, 'Pneumonia', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1004, 102, 'Vaccinated', 2, 'Covid-19', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1005, 102, 'Vaccinated', 2, 'Influenza', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1006, 103, 'Unvaccinated', 0, 'Covid-19', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1007, 103, 'Vaccinated', 1, 'Influenza', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1008, 103, 'Vaccinated', 1, 'Pneumonia', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1009, 104, 'Vaccinated', 2, 'Covid-19', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1010, 104, 'Vaccinated', 3, 'HepB', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1011, 106, 'Vaccinated', 2, 'Influenza', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1012, 106, 'Vaccinated', 1, 'Covid-19', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1013, 107, 'Unvaccinated', 0, 'Covid-19', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1014, 107, 'Vaccinated', 3, 'HepB', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1015, 107, 'Vaccinated', 2, 'Pneumonia', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1016, 108, 'Vaccinated', 3, 'Meningococcal', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1017, 109, 'Unvaccinated', 0, 'Covid-19', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1018, 110, 'Unvaccinated', 0, 'Meningococcal', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1019, 110, 'Vaccinated', 2, 'Pneumonia', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1020, 110, 'Unvaccinated', 0, 'Covid-19', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1021, 111, 'Unvaccinated', 0, 'Covid-19', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1022, 112, 'Vaccinated', 2, 'Covid-19', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1023, 112, 'Vaccinated', 2, 'Pneumonia', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1024, 112, 'Vaccinated', 3, 'HepB', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1025, 113, 'Unvaccinated', 0, 'HepB', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1026, 114, 'Vaccinated', 1, 'Covid-19', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1027, 115, 'Vaccinated', 1, 'Covid-19', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1028, 116, 'Unvaccinated', 0, 'HepB', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1029, 116, 'Unvaccinated', 0, 'Covid-19', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1030, 117, 'Vaccinated', 2, 'Pneumonia', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1031, 117, 'Vaccinated', 1, 'Influenza', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1032, 118, 'Vaccinated', 2, 'Covid-19', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1033, 118, 'Vaccinated', 0, 'HepB', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1034, 119, 'Unvaccinated', 0, 'Covid-19', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1035, 120, 'Vaccinated', 3, 'Covid-19', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1036, 120, 'Vaccinated', 1, 'Influenza', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1037, 120, 'Vaccinated', 1, 'Meningococcal', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1038, 121, 'Vaccinated', 2, 'Covid-19', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1039, 121, 'Unvaccinated', 0, 'Influenza', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1040, 122, 'Vaccinated', 3, 'Covid-19', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1041, 122, 'Vaccinated', 1, 'Meningococcal', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1042, 122, 'Vaccinated', 1, 'Influenza', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1043, 122, 'Vaccinated', 2, 'Pneumonia', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1044, 122, 'Vaccinated', 3, 'HepB', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1045, 123, 'Vaccinated', 2, 'Covid-19', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1046, 123, 'Unvaccinated', 0, 'Meningococcal', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1047, 123, 'Vaccinated', 1, 'Influenza', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1048, 124, 'Vaccinated', 1, 'Influenza', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1049, 124, 'Vaccinated', 1, 'Pneumonia', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1050, 124, 'Vaccinated', 3, 'HepB', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1051, 125, 'Vaccinated', 2, 'Pneumonia', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1052, 125, 'Vaccinated', 3, 'HepB', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1053, 125, 'Vaccinated', 2, 'Covid-19', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1054, 126, 'Vaccinated', 1, 'Meningococcal', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1055, 126, 'Vaccinated', 2, 'Covid-19', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1056, 126, 'Unvaccinated', 0, 'Influenza', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1057, 127, 'Vaccinated', 1, 'Meningococcal', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1058, 127, 'Vaccinated', 2, 'Covid-19', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1059, 127, 'Vaccinated', 0, 'Influenza', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1060, 128, 'Vaccinated', 2, 'Pneumonia', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1061, 128, 'Vaccinated', 3, 'HepB', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1062, 128, 'Vaccinated', 2, 'Covid-19', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1063, 129, 'Unvaccinated', 0, 'Meningococcal', 'NULL');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1064, 129, 'Vaccinated', 2, 'Pneumonia', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1065, 129, 'Vaccinated', 2, 'Covid-19', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1066, 130, 'Vaccinated', 2, 'Influenza', 'Y');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1067, 130, 'Vaccinated', 2, 'Covid-19', 'N');
+insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1068, 130, 'Vaccinated', 2, 'Pneumonia', 'Y');
