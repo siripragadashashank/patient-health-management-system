@@ -101,7 +101,6 @@ CREATE TABLE LabResultDetails
 (
 TestID INT PRIMARY KEY ,
 TestName VARCHAR(45),
-TestDept VARCHAR(45),
 Price DOUBLE PRECISION
 );
 
