@@ -104,3 +104,17 @@ insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values
 insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (29,129, 'Tony' ,'Silva',3038072071);
 insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (30,130, 'Jose' ,'Richards',7043395859);
 select * from EPOC
+
+-------------------VitalSignDetails----------------------------
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (1, 'BP Systolic' , 'mm/hg');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (2, 'BP Diastolic' , 'mm/hg');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (3, 'Pulse' , 'per min');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (4, 'Respiration' , 'per min');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (5, 'Temperature' , 'F');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (6, 'Weight' , 'lbs');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (7, 'Height' , 'm');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (8, 'BMI' , 'lbs/m2');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (9, 'SPO2' , '%');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (10, 'Pain Scale' , 'level');
+
+select * from VitalSignDetails

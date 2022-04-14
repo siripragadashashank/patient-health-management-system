@@ -52,7 +52,7 @@ HealthCareProviderID INT PRIMARY KEY,
 Designation VARCHAR(45),
 EmpFirstName VARCHAR(45),
 EmpLastName VARCHAR(45),
-EmpContactNo INT
+EmpContactNo BIGINT
 );
 
  CREATE TABLE PatientEncounter
