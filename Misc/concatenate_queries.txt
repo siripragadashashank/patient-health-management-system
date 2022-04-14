@@ -16,4 +16,13 @@
 
 ------ Vaccination ------
 
-=concatenate("insert into Vaccination(", "LotNo,",	" PatID,",	" VaccinationStatus,", " NoOfDoses,",	" VaccineName,", " BoosterStatus)", " values (", A2, ", ", B2, ", ", "'"& C2 &"'", ", ", D2, ", ",  
+=concatenate("insert into Vaccination(", "LotNo,",	" PatID,",	" VaccinationStatus,", " NoOfDoses,",	" VaccineName,", " BoosterStatus)", " values (", A2, ", ", B2, ", ", "'"& C2 &"'", ", ", D2, ", ","'"& E2 &"'", ", ", "'"& F2 &"'", ");")
+
+
+-----PatinetEncounter ---------
+
+=concatenate("insert into PatientEncounter(", "PatEncID,",	" PatID,",	" HealthCareProviderID,",	" PatEncAdmitDate,", " AdmitType,"," AdmitLocation,"," PatEncDiscDate,", " DiscLocation)", " values (", A2,", ", B2, ", ", C2, ", ", "'"& TEXT(D2, "yyyy-mm-dd") &"'", ", ", "'"& E2 &"'", ", ", "'"& F2 &"'", ", ", "'"& TEXT(G2, "yyyy-mm-dd") &"'", ", ", "'"& H2 &"'", ");")														
+
+-----------------HealthCareProvider----------
+
+=concatenate("insert into HealthCareProvider(", "HealthCareProviderID,", " Designation,", " EmpFirstName,", " EmpLastName,", " EmpContactNo) values (", A2, ", ", "'"& B2 &"'", ", ", "'"& C2 &"'", ", ", "'"& D2 &"'", ", ", E2, ");")	
