@@ -963,3 +963,17 @@ insert into VitalSigns(PatEncID, VitalID, StoreTime, VitalVal) values (20109, 9,
 insert into VitalSigns(PatEncID, VitalID, StoreTime, VitalVal) values (20110, 5, '2022-04-09', 103);
 
 
+----------------------MedicationDetails--------------------------
+
+insert into MedicationDetails(MedID, MedName, MedPrice) values (41, 'Contac', 6.86);
+insert into MedicationDetails(MedID, MedName, MedPrice) values (42, 'Tylenol', 6.5);
+insert into MedicationDetails(MedID, MedName, MedPrice) values (43, 'Atorvastatin', 5.4);
+insert into MedicationDetails(MedID, MedName, MedPrice) values (44, 'Lisinopril', 3);
+insert into MedicationDetails(MedID, MedName, MedPrice) values (45, 'Metformin', 4);
+insert into MedicationDetails(MedID, MedName, MedPrice) values (46, 'Advil', 5.99);
+insert into MedicationDetails(MedID, MedName, MedPrice) values (47, 'Nyquil', 9.99);
+insert into MedicationDetails(MedID, MedName, MedPrice) values (48, 'Gabapentin', 10.2);
+insert into MedicationDetails(MedID, MedName, MedPrice) values (49, 'Omeprazole', 5.1);
+insert into MedicationDetails(MedID, MedName, MedPrice) values (50, 'Losartan', 2.14);
+insert into MedicationDetails(MedID, MedName, MedPrice) values (51, 'Amlodipine', 3.9);
+
