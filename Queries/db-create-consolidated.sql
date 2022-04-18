@@ -110,8 +110,7 @@ PatEncID INT NOT NULL REFERENCES PatientEncounter(PatEncID),
 HealthCareProviderID INT NOT NULL REFERENCES HealthCareProvider(HealthCareProviderID),
 TestID INT NOT NULL REFERENCES LabResultDetails(TestID),
 StoreTime Date,
-Val varchar(45),
-ValNum double precision
+Val double precision
 );
 
 
@@ -127,8 +126,7 @@ CREATE TABLE VitalSigns
 PatEncID INT  NOT NULL REFERENCES PatientEncounter(PatEncID),
 VitalID INT NOT NULL REFERENCES VitalSignDetails(VitalID),
 StoreTime DATETIME,
-VitalVal VARCHAR(45),
-VitalValNum DOUBLE PRECISION
+VitalVal DOUBLE PRECISION
 );
 
 

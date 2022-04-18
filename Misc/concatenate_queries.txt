@@ -26,3 +26,14 @@
 -----------------HealthCareProvider----------
 
 =concatenate("insert into HealthCareProvider(", "HealthCareProviderID,", " Designation,", " EmpFirstName,", " EmpLastName,", " EmpContactNo) values (", A2, ", ", "'"& B2 &"'", ", ", "'"& C2 &"'", ", ", "'"& D2 &"'", ", ", E2, ");")	
+
+--------------VitalSigns--------
+=concatenate("insert into VitalSigns(", "PatEncID,", " VitalID,"," StoreTime,"," VitalVal) values (", A2, ", ", B2, ", ", "'"& TEXT(C2, "yyyy-mm-dd") &"'", ", ", D2, ");")	
+
+
+-----VitalSignDetails-------
+=concatenate("insert into VitalSigns(", "PatEncID,", " VitalID,"," StoreTime,"," VitalVal) values (", A2, ", ", B2, ", ", "'"& TEXT(C2, "yyyy-mm-dd") &"'", ", ", D2, ");")	
+
+
+-----LabResults-------
+=concatenate("insert into LabResults(", "PatEncID,", " HealthCareProviderID,"," TestID,"," StoreTime", ValNum) values (", A2, ", ", B2, ", ", C2,", ", "'"& TEXT(D2, "yyyy-mm-dd") &"'", ", ", E2,  ");")	

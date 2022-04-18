@@ -1,8 +1,8 @@
----------------------------------------------------Insert---------------------------------------------------------------------
 use PHMS;
 
 
---------------------------------------Patient--------------------------------------------------------------------------------
+---------------------------Patient--------------------------------
+
 
 insert into Patient(PatID, FirstName, LastName, DoB, Street, City, State, ZipCode, PhoneNo, EmailAddress) values (101, 'Oscar' ,'Yang','1962-06-10', '2210 Elmwood Avenue', 'Mesa', 'Arizona',85201,4809625179, 'oscar.yang@gmail.com');
 insert into Patient(PatID, FirstName, LastName, DoB, Street, City, State, ZipCode, PhoneNo, EmailAddress) values (102, 'Richard' ,'Rice','1962-10-14', '4013 Southern Avenue', 'Eureka', 'Missouri',63025,6369382484, 'richard.rice@gmail.com');
@@ -35,7 +35,9 @@ insert into Patient(PatID, FirstName, LastName, DoB, Street, City, State, ZipCod
 insert into Patient(PatID, FirstName, LastName, DoB, Street, City, State, ZipCode, PhoneNo, EmailAddress) values (129, 'Tracy' ,'Peterson','1988-02-08', '4976 McKinley Avenue', 'Denver', 'Colorado',80202,3038072071, 'tracy.peterson@gmail.com');
 insert into Patient(PatID, FirstName, LastName, DoB, Street, City, State, ZipCode, PhoneNo, EmailAddress) values (130, 'Amy' ,'Martin','1992-11-16', '2078 Red Dog Road', 'Charlotte', 'North Carolina',28202,7043395859, 'amy.martin@gmail.com');
 
-----------------------------------------------PatientDemographics----------------------------------------------------------------
+
+
+-----------------------------PatientDemographics-----------------
 
 
 insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (101, 'M','Other', 'Non Hispanic', 'Unavailable', 'Unemployed');
@@ -69,7 +71,42 @@ insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, E
 insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (129, 'F','Asian', 'Unavailable', 'Married', 'Unemployed');
 insert into PatientDemographics(PatID, Gender, Race, Ethnicity, MaritalStatus, EmploymentStatus) values (130, 'F','Unavailable', 'Non Hispanic', 'Divorced', 'Unemployed');
 
------------------------------------------- Vaccination
+
+-------------------------EPOC-------------------------
+
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (1,101, 'Anthony' ,'Mendoza',3607027103);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (2,102, 'Colleen' ,'Reed',3346093248);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (3,103, 'Bobbie' ,'Harper',6463538347);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (4,104, 'Bernard' ,'Mccormick',4127741666);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (5,105, 'Alonzo' ,'Allen',4805511804);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (6,106, 'Emilio' ,'Klein',2675371407);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (7,107, 'Toni' ,'Collins',5592178932);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (8,108, 'Arlene' ,'Bridges',7725386959);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (9,109, 'Rufus' ,'Russell',3473391104);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (10,110, 'Salvador' ,'Barnett',3402205144);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (11,111, 'Tracy' ,'Mullins',2814701730);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (12,112, 'Glen' ,'Ruiz',7753539431);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (13,113, 'Conrad' ,'Patrick',6083474141);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (14,114, 'Georgia' ,'Hunter',4195306136);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (15,115, 'Brendan' ,'Daniel',2139638469);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (16,116, 'Tricia' ,'Vaughn',2066024801);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (17,117, 'Christian' ,'Armstrong',4432104071);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (18,118, 'Casey' ,'Huff',5673514078);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (19,119, 'Luz' ,'Moss',2603571958);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (20,120, 'Alexis' ,'Rivera',4082447244);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (21,121, 'June' ,'Herrera',4108587688);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (22,122, 'Marilyn' ,'Reyes',9405576186);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (23,123, 'Penny' ,'Harrison',6627142782);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (24,124, 'Kyle' ,'Sims',9124377159);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (25,125, 'Elvira' ,'Howard',8016455363);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (26,126, 'Jeannie' ,'Morrison',8147150156);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (27,127, 'Jo' ,'Boyd',3523446389);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (28,128, 'Barbara' ,'Walsh',2489482017);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (29,129, 'Tony' ,'Silva',3038072071);
+insert into EPOC (EPOCID,PatID, EPOCFirstName, EPOCLastName, EPOCPhoneNo) values (30,130, 'Jose' ,'Richards',7043395859);
+
+------------------------------------Vaccination-------------
+
 
 
 insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1001, 101, 'Vaccinated', 3, 'Covid-19', 'Y');
@@ -140,10 +177,10 @@ insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName,
 insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1066, 130, 'Vaccinated', 2, 'Influenza', 'Y');
 insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1067, 130, 'Vaccinated', 2, 'Covid-19', 'N');
 insert into Vaccination(LotNo, PatID, VaccinationStatus, NoOfDoses, VaccineName, BoosterStatus) values (1068, 130, 'Vaccinated', 2, 'Pneumonia', 'Y');
------------------------------------------------
 
 
--------------HealthCareProvider----------------------
+--------------------------HealthcareProvider----------------------
+
 
 insert into HealthCareProvider(HealthCareProviderID, Designation, EmpFirstName, EmpLastName, EmpContactNo) values (3215, 'Hospital pharmacist', 'Beatrice', 'Reid', 6464997392);
 insert into HealthCareProvider(HealthCareProviderID, Designation, EmpFirstName, EmpLastName, EmpContactNo) values (3216, 'Attending physician', 'Ora', 'Walters', 6615071463);
@@ -196,41 +233,9 @@ insert into HealthCareProvider(HealthCareProviderID, Designation, EmpFirstName, 
 insert into HealthCareProvider(HealthCareProviderID, Designation, EmpFirstName, EmpLastName, EmpContactNo) values (3263, 'Emergency physician', 'Wanda', 'Lopez', 4702078477);
 insert into HealthCareProvider(HealthCareProviderID, Designation, EmpFirstName, EmpLastName, EmpContactNo) values (3264, 'Cardiologist', 'Jimmy', 'Fields', 4235963194);
 
+------------------ PatientEncounter--------------
 
----------------InsuranceProvider--------------------------
 
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10001,101, 'Blue Cross Blue Shield');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10002,102, 'CIGNA');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10003,103, 'CVS');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10004,104, 'Blue Cross Blue Shield');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10005,105, 'United Health');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10006,106, 'CVS');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10007,107, 'United Health');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10008,108, 'Blue Cross Blue Shield');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10009,109, 'CVS');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10010,110, 'CVS');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10011,111, 'CIGNA');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10012,112, 'CVS');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10013,113, 'Blue Cross Blue Shield');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10014,114, 'Blue Cross Blue Shield');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10015,115, 'Blue Cross Blue Shield');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10016,116, 'Blue Cross Blue Shield');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10017,117, 'CIGNA');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10018,118, 'United Health');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10019,119, 'CIGNA');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10020,120, 'CIGNA');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10021,121, 'CVS');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10022,122, 'CVS');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10023,123, 'United Health');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10024,124, 'United Health');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10025,125, 'CIGNA');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10026,126, 'United Health');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10027,127, 'Blue Cross Blue Shield');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10028,128, 'CVS');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10029,129, 'CVS');
-insert into InsuranceProvider (InsuranceID,PatID, InsuranceProviderName,) values (10030,130, 'CVS');
-
------------------- PatientEncounter --------------
 insert into PatientEncounter(PatEncID, PatID, HealthCareProviderID, PatEncAdmitDate, AdmitType, AdmitLocation, PatEncDiscDate, DiscLocation) values (20001, 115, 3253, '2020-01-05', 'Emergency', 'Neurology', '2020-01-12', 'Urology');
 insert into PatientEncounter(PatEncID, PatID, HealthCareProviderID, PatEncAdmitDate, AdmitType, AdmitLocation, PatEncDiscDate, DiscLocation) values (20002, 121, 3251, '2020-01-20', 'Emergency', 'Oncology', '2020-01-30', 'Urology');
 insert into PatientEncounter(PatEncID, PatID, HealthCareProviderID, PatEncAdmitDate, AdmitType, AdmitLocation, PatEncDiscDate, DiscLocation) values (20003, 124, 3253, '2020-01-23', 'Elective', 'Haematology', '2020-02-02', 'Orthopaedics');
@@ -342,6 +347,8 @@ insert into PatientEncounter(PatEncID, PatID, HealthCareProviderID, PatEncAdmitD
 insert into PatientEncounter(PatEncID, PatID, HealthCareProviderID, PatEncAdmitDate, AdmitType, AdmitLocation, PatEncDiscDate, DiscLocation) values (20109, 115, 3253, '2022-04-06', 'Emergency', 'Oncology', NULL, NULL);
 insert into PatientEncounter(PatEncID, PatID, HealthCareProviderID, PatEncAdmitDate, AdmitType, AdmitLocation, PatEncDiscDate, DiscLocation) values (20110, 130, 3237, '2022-04-07', 'Emergency', 'Intensive Care Unit (ICU)', NULL, NULL);
 
+
+
 ----- SymptomDetails---
 
 
@@ -373,8 +380,476 @@ insert into SymptomDetails(SymCode, SymName) values (33, 'Disorientation');
 
 
 
-------------VitalSigns
+---------------Symptoms-----------------
 
+insert into Symptoms( PatEncID, SymCode, Duration) values (20001, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20002, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20003, 33, 25);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20003, 25, 42);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20004, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20005, 10, 15);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20005, 27, 47);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20006, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20007, 13, 23);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20007, 18, 38);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20007, 33, 28);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20008, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20009, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20010, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20011, 15, 30);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20012, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20013, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20014, 13, 4);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20014, 14, 39);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20015, 24, 14);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20016, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20017, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20018, 33, 19);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20019, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20020, 17, 15);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20021, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20022, 19, 27);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20023, 10, 18);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20023, 28, 29);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20023, 18, 6);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20023, 16, 5);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20024, 29, 34);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20024, 17, 23);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20025, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20026, 18, 30);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20026, 20, 4);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20027, 29, 20);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20027, 14, 15);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20028, 23, 40);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20028, 12, 29);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20029, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20030, 27, 25);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20030, 23, 36);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20030, 11, 35);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20031, 25, 21);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20031, 33, 40);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20032, 18, 10);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20032, 13, 6);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20033, 29, 24);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20034, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20035, 19, 12);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20035, 18, 4);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20035, 21, 37);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20036, 33, 13);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20037, 17, 24);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20038, 26, 41);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20039, 13, 18);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20039, 11, 24);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20040, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20041, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20042, 26, 19);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20043, 26, 23);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20043, 15, 18);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20044, 32, 17);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20045, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20046, 29, 37);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20046, 32, 4);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20046, 12, 45);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20047, 32, 36);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20047, 33, 41);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20047, 29, 47);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20048, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20049, 14, 43);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20049, 30, 38);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20049, 32, 43);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20050, 32, 46);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20050, 26, 6);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20050, 17, 31);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20051, 14, 41);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20051, 12, 8);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20052, 15, 42);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20052, 21, 33);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20053, 25, 33);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20053, 26, 38);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20053, 24, 47);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20054, 13, 34);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20055, 13, 32);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20056, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20057, 29, 39);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20058, 12, 23);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20058, 21, 16);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20058, 32, 16);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20058, 24, 20);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20059, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20060, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20061, 14, 41);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20061, 12, 21);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20061, 29, 12);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20062, 33, 4);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20063, 19, 31);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20064, 30, 19);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20064, 31, 22);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20064, 32, 28);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20065, 17, 46);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20066, 22, 31);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20066, 14, 25);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20067, 16, 25);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20067, 15, 21);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20068, 32, 47);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20068, 26, 21);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20069, 29, 6);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20069, 22, 47);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20069, 31, 6);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20070, 22, 44);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20070, 10, 11);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20070, 19, 14);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20071, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20072, 26, 30);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20073, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20074, 22, 8);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20074, 18, 21);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20074, 30, 6);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20075, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20076, 13, 6);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20077, 33, 8);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20077, 16, 46);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20078, 27, 5);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20078, 31, 17);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20078, 10, 9);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20079, 32, 31);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20079, 12, 28);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20080, 14, 8);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20080, 30, 16);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20081, 29, 23);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20081, 27, 17);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20082, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20083, 19, 4);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20083, 20, 6);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20083, 21, 26);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20084, 33, 29);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20085, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20086, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20087, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20088, 33, 28);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20089, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20090, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20091, 27, 34);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20091, 26, 31);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20091, 19, 14);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20091, 14, 22);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20092, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20093, 25, 5);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20094, 21, 41);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20095, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20096, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20097, 32, 6);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20098, 30, 12);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20098, 10, 38);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20099, 22, 16);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20100, 33, 44);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20100, 32, 42);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20101, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20102, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20103, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20104, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20105, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20106, 23, 15);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20107, 23, 33);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20107, 15, 40);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20108, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20109, 0, 0);
+insert into Symptoms( PatEncID, SymCode, Duration) values (20110, 0, 0);
+
+
+--------------------DiagnosisDetails------------------------------
+insert into DiagnosisDetails(DxCode, DxName) values (45, 'Congestive heart failure (CHF)');
+insert into DiagnosisDetails(DxCode, DxName) values (46, 'Acute myocardial infarction');
+insert into DiagnosisDetails(DxCode, DxName) values (47, 'Cardiac dysrhythmia');
+insert into DiagnosisDetails(DxCode, DxName) values (48, 'Lumbago');
+insert into DiagnosisDetails(DxCode, DxName) values (49, 'Chronic obstructive pulmonary disease (COPD)');
+insert into DiagnosisDetails(DxCode, DxName) values (50, 'Atrial fibrillation');
+insert into DiagnosisDetails(DxCode, DxName) values (51, 'Diabetes Type I');
+insert into DiagnosisDetails(DxCode, DxName) values (52, 'Diabetes Type II');
+insert into DiagnosisDetails(DxCode, DxName) values (53, 'Urinary tract infection (UTI)');
+insert into DiagnosisDetails(DxCode, DxName) values (54, 'Abdominal infection');
+insert into DiagnosisDetails(DxCode, DxName) values (55, 'Osteoarthritis');
+insert into DiagnosisDetails(DxCode, DxName) values (56, 'Jaundice');
+insert into DiagnosisDetails(DxCode, DxName) values (57, 'Hypertension');
+insert into DiagnosisDetails(DxCode, DxName) values (58, 'Surgical Complication');
+insert into DiagnosisDetails(DxCode, DxName) values (59, 'Heart failure');
+insert into DiagnosisDetails(DxCode, DxName) values (60, 'Acute bronchitis');
+insert into DiagnosisDetails(DxCode, DxName) values (61, 'Pneumonia');
+insert into DiagnosisDetails(DxCode, DxName) values (62, 'COVID-19');
+insert into DiagnosisDetails(DxCode, DxName) values (63, 'Basal cell carcinoma of skin');
+insert into DiagnosisDetails(DxCode, DxName) values (64, 'Carcinoma in stomach');
+insert into DiagnosisDetails(DxCode, DxName) values (65, 'Carcinoma in eye');
+insert into DiagnosisDetails(DxCode, DxName) values (66, 'Cerebral infraction');
+insert into DiagnosisDetails(DxCode, DxName) values (67, 'Clostridium difficile (C.Diff)');
+insert into DiagnosisDetails(DxCode, DxName) values (68, 'Sepsis');
+insert into DiagnosisDetails(DxCode, DxName) values (69, 'Severe sepsis');
+
+
+
+----------------Diagnosis------------------------
+
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20001, 3222, 52);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20002, 3230, 47);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20003, 3230, 65);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20003, 3222, 62);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20004, 3236, 50);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20005, 3261, 66);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20005, 3253, 55);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20006, 3244, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20007, 3239, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20007, 3231, 67);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20007, 3248, 58);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20008, 3250, 49);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20009, 3261, 55);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20010, 3220, 57);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20011, 3250, 57);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20012, 3216, 58);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20013, 3237, 53);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20014, 3262, 55);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20014, 3234, 47);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20015, 3251, 58);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20016, 3216, 69);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20017, 3248, 62);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20018, 3239, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20019, 3235, 69);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20020, 3237, 54);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20021, 3243, 52);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20022, 3216, 58);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20023, 3229, 48);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20023, 3222, 67);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20023, 3225, 48);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20023, 3228, 45);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20024, 3220, 66);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20024, 3261, 56);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20025, 3225, 59);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20026, 3247, 67);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20026, 3264, 62);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20027, 3233, 62);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20027, 3221, 61);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20028, 3250, 47);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20028, 3250, 45);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20029, 3232, 68);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20030, 3222, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20030, 3248, 51);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20030, 3244, 55);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20031, 3260, 65);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20031, 3237, 62);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20032, 3260, 67);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20032, 3252, 69);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20033, 3237, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20034, 3250, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20035, 3243, 52);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20035, 3244, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20035, 3230, 53);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20036, 3257, 55);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20037, 3234, 47);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20038, 3234, 65);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20039, 3261, 65);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20039, 3260, 62);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20040, 3263, 48);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20041, 3250, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20042, 3252, 68);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20043, 3233, 51);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20043, 3220, 50);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20044, 3262, 52);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20045, 3262, 62);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20046, 3221, 67);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20046, 3228, 61);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20046, 3216, 52);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20047, 3260, 59);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20047, 3236, 59);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20047, 3264, 55);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20048, 3263, 69);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20049, 3221, 69);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20049, 3225, 52);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20049, 3253, 56);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20050, 3216, 61);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20050, 3228, 48);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20050, 3261, 50);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20051, 3233, 57);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20051, 3251, 49);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20052, 3260, 69);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20052, 3236, 66);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20053, 3235, 45);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20053, 3260, 61);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20053, 3232, 68);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20054, 3228, 51);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20055, 3260, 55);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20056, 3228, 49);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20057, 3260, 58);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20058, 3221, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20058, 3264, 56);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20058, 3236, 53);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20058, 3264, 59);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20059, 3263, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20060, 3216, 45);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20061, 3230, 67);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20061, 3244, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20061, 3243, 60);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20062, 3260, 57);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20063, 3263, 66);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20064, 3264, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20064, 3234, 49);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20064, 3225, 49);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20065, 3244, 55);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20066, 3264, 51);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20066, 3232, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20067, 3263, 48);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20067, 3233, 68);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20068, 3260, 45);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20068, 3232, 54);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20069, 3229, 50);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20069, 3236, 45);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20069, 3232, 63);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20070, 3229, 55);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20070, 3262, 48);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20070, 3260, 47);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20071, 3225, 48);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20072, 3261, 45);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20073, 3230, 50);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20074, 3247, 58);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20074, 3243, 68);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20074, 3230, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20075, 3264, 68);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20076, 3262, 52);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20077, 3251, 48);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20077, 3235, 50);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20078, 3262, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20078, 3228, 57);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20078, 3248, 48);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20079, 3262, 69);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20079, 3229, 53);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20080, 3263, 52);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20080, 3232, 61);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20081, 3222, 54);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20081, 3237, 62);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20082, 3234, 68);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20083, 3216, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20083, 3253, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20083, 3263, 53);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20084, 3252, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20085, 3264, 47);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20086, 3252, 55);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20087, 3230, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20088, 3263, 69);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20089, 3252, 65);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20090, 3232, 58);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20091, 3263, 62);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20091, 3264, 50);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20091, 3216, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20091, 3229, 68);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20092, 3220, 53);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20093, 3220, 62);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20094, 3229, 45);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20095, 3237, 61);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20096, 3248, 49);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20097, 3260, 45);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20098, 3232, 52);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20098, 3264, 48);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20099, 3243, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20100, 3220, 67);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20100, 3251, 59);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20101, 3239, 63);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20102, 3253, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20103, 3225, 69);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20104, 3233, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20105, 3252, 54);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20106, 3243, 49);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20107, 3262, 60);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20107, 3247, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20108, 3225, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20109, 3232, 64);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20110, 3251, 49);
+
+-------------------------LabResultDetails---------------------------------------
+insert into LabResultDetails(TestID, TestName, Price) values (106, 'Red Blood Cell (RBC) Count',175);
+insert into LabResultDetails(TestID, TestName, Price) values (109, 'Complete Blood Count',151);
+insert into LabResultDetails(TestID, TestName, Price) values (113, 'Hepatitis C',195);
+insert into LabResultDetails(TestID, TestName, Price) values (114, 'Biopsy',150);
+insert into LabResultDetails(TestID, TestName, Price) values (115, 'Serum Vitamin B12',159);
+insert into LabResultDetails(TestID, TestName, Price) values (117, 'Chromosome Analysis',81);
+insert into LabResultDetails(TestID, TestName, Price) values (120, 'Prothrombin Time',80);
+insert into LabResultDetails(TestID, TestName, Price) values (121, 'MRI',500);
+insert into LabResultDetails(TestID, TestName, Price) values (127, 'LDL Cholesterol',168);
+insert into LabResultDetails(TestID, TestName, Price) values (128, 'CT Scan',220);
+insert into LabResultDetails(TestID, TestName, Price) values (129, 'EKG / ECG',50);
+insert into LabResultDetails(TestID, TestName, Price) values (132, 'Renal Function Panel',151);
+insert into LabResultDetails(TestID, TestName, Price) values (135, 'D-Dimer',138);
+insert into LabResultDetails(TestID, TestName, Price) values (136, 'Body Fluid Uric Acid',90);
+insert into LabResultDetails(TestID, TestName, Price) values (138, 'X-Ray',182);
+insert into LabResultDetails(TestID, TestName, Price) values (139, 'Urine Histamine ',52);
+insert into LabResultDetails(TestID, TestName, Price) values (140, 'Hepatitis A',109);
+insert into LabResultDetails(TestID, TestName, Price) values (141, 'Comprehensive Metabolic Panel',179);
+insert into LabResultDetails(TestID, TestName, Price) values (143, 'Hepatitis B',73);
+insert into LabResultDetails(TestID, TestName, Price) values (146, 'Bacterial Culture',138);
+insert into LabResultDetails(TestID, TestName, Price) values (149, 'Kidney Transplant',150000);
+insert into LabResultDetails(TestID, TestName, Price) values (153, 'T3',108);
+insert into LabResultDetails(TestID, TestName, Price) values (155, 'HDL Cholesterol',163);
+insert into LabResultDetails(TestID, TestName, Price) values (157, 'Serum Albumin ',179);
+insert into LabResultDetails(TestID, TestName, Price) values (158, 'Lipid Profile',68);
+insert into LabResultDetails(TestID, TestName, Price) values (161, 'Serum Electrolyte Panel ',91);
+insert into LabResultDetails(TestID, TestName, Price) values (166, 'Urine Protein',83);
+insert into LabResultDetails(TestID, TestName, Price) values (172, 'SARS-CoV-2',50);
+insert into LabResultDetails(TestID, TestName, Price) values (174, 'Heart Transplant',50000);
+insert into LabResultDetails(TestID, TestName, Price) values (175, 'Dengue Virus Antibody',143);
+insert into LabResultDetails(TestID, TestName, Price) values (177, 'Hemoglobin Blood',177);
+insert into LabResultDetails(TestID, TestName, Price) values (178, 'Urine D-Lactate',128);
+insert into LabResultDetails(TestID, TestName, Price) values (179, 'Blood Urea Nitrogen (BUN)',190);
+insert into LabResultDetails(TestID, TestName, Price) values (184, 'HIV',92);
+insert into LabResultDetails(TestID, TestName, Price) values (185, 'Influenza Virus',162);
+insert into LabResultDetails(TestID, TestName, Price) values (194, 'T4',108);
+insert into LabResultDetails(TestID, TestName, Price) values (196, 'Liver Panel',170);
+insert into LabResultDetails(TestID, TestName, Price) values (197, 'Bone Fracture Repair',20000);
+
+
+-------------------------------
+
+---------------------LabResults-------------------
+
+
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20001, 3225, 120, '2020-01-11', 12);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20005, 3231, 127, '2020-02-23', 120);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20006, 3247, 157, '2020-02-14', 2.3);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20010, 3257, 179, '2020-03-18', 30);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20022, 3233, 166, '2020-07-05', 10);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20029, 3223, 115, '2020-09-04', 170);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20041, 3249, 155, '2020-12-16', 60);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20042, 3251, 140, '2020-12-19', 1);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20043, 3232, 172, '2020-12-27', 1);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20046, 3264, 135, '2021-01-05', 240);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20047, 3247, 135, '2021-01-13', 240);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20048, 3263, 155, '2021-01-08', 58);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20049, 3239, 139, '2021-01-10', 13);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20050, 3247, 135, '2021-01-27', 238);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20060, 3228, 139, '2021-05-19', 13);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20061, 3234, 177, '2021-05-27', 15);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20062, 3235, 153, '2021-05-25', 150);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20063, 3224, 179, '2021-05-26', 24);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20064, 3264, 136, '2021-06-03', 1);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20068, 3232, 185, '2021-07-01', 1);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20077, 3263, 166, '2021-09-30', 10);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20078, 3231, 157, '2021-10-15', 5.8);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20081, 3234, 194, '2021-11-02', 4);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20082, 3244, 135, '2021-11-03', 240);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20083, 3225, 120, '2021-11-07', 12);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20088, 3253, 120, '2021-12-29', 12);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20091, 3243, 172, '2022-01-20', 0);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20095, 3239, 136, '2022-02-21', 0);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20096, 3247, 179, '2022-02-20', 14);
+
+-------------------VitalSignDetails----------------------------
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (1, 'BP Systolic' , 'mm/hg');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (2, 'BP Diastolic' , 'mm/hg');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (3, 'Pulse' , 'per min');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (4, 'Respiration' , 'per min');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (5, 'Temperature' , 'F');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (6, 'Weight' , 'lbs');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (7, 'Height' , 'm');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (8, 'BMI' , 'lbs/m2');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (9, 'SPO2' , '%');
+insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (10, 'Pain Scale' , 'level');
+
+
+------------VitalSigns---------------------------
 
 insert into VitalSigns(PatEncID, VitalID, StoreTime, VitalVal) values (20001, 10, '2020-01-06', 5);
 insert into VitalSigns(PatEncID, VitalID, StoreTime, VitalVal) values (20002, 3, '2020-01-21', 108);
@@ -488,38 +963,3 @@ insert into VitalSigns(PatEncID, VitalID, StoreTime, VitalVal) values (20109, 9,
 insert into VitalSigns(PatEncID, VitalID, StoreTime, VitalVal) values (20110, 5, '2022-04-09', 103);
 
 
-
-
--------------------------------------------------------
-
-
-
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20001, 3225, 120, '2020-01-11', 12);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20005, 3231, 127, '2020-02-23', 120);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20006, 3247, 157, '2020-02-14', 2.3);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20010, 3257, 179, '2020-03-18', 30);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20022, 3233, 166, '2020-07-05', 10);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20029, 3223, 115, '2020-09-04', 170);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20041, 3249, 155, '2020-12-16', 60);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20042, 3251, 140, '2020-12-19', 1);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20043, 3232, 172, '2020-12-27', 1);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20046, 3264, 135, '2021-01-05', 240);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20047, 3247, 135, '2021-01-13', 240);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20048, 3263, 155, '2021-01-08', 58);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20049, 3239, 139, '2021-01-10', 13);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20050, 3247, 135, '2021-01-27', 238);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20060, 3228, 139, '2021-05-19', 13);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20061, 3234, 177, '2021-05-27', 15);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20062, 3235, 153, '2021-05-25', 150);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20063, 3224, 179, '2021-05-26', 24);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20064, 3264, 136, '2021-06-03', 1);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20068, 3232, 185, '2021-07-01', 1);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20077, 3263, 166, '2021-09-30', 10);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20078, 3231, 157, '2021-10-15', 5.8);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20081, 3234, 194, '2021-11-02', 4);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20082, 3244, 135, '2021-11-03', 240);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20083, 3225, 120, '2021-11-07', 12);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20088, 3253, 120, '2021-12-29', 12);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20091, 3243, 172, '2022-01-20', 0);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20095, 3239, 136, '2022-02-21', 0);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20096, 3247, 179, '2022-02-20', 14);
