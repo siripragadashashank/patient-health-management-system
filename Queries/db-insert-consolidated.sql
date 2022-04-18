@@ -806,35 +806,35 @@ insert into LabResultDetails(TestID, TestName, Price) values (197, 'Bone Fractur
 ---------------------LabResults-------------------
 
 
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20001, 3225, 120, '2020-01-11', 12);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20005, 3231, 127, '2020-02-23', 120);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20006, 3247, 157, '2020-02-14', 2.3);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20010, 3257, 179, '2020-03-18', 30);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20022, 3233, 166, '2020-07-05', 10);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20029, 3223, 115, '2020-09-04', 170);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20041, 3249, 155, '2020-12-16', 60);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20042, 3251, 140, '2020-12-19', 1);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20043, 3232, 172, '2020-12-27', 1);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20046, 3264, 135, '2021-01-05', 240);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20047, 3247, 135, '2021-01-13', 240);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20048, 3263, 155, '2021-01-08', 58);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20049, 3239, 139, '2021-01-10', 13);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20050, 3247, 135, '2021-01-27', 238);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20060, 3228, 139, '2021-05-19', 13);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20061, 3234, 177, '2021-05-27', 15);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20062, 3235, 153, '2021-05-25', 150);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20063, 3224, 179, '2021-05-26', 24);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20064, 3264, 136, '2021-06-03', 1);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20068, 3232, 185, '2021-07-01', 1);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20077, 3263, 166, '2021-09-30', 10);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20078, 3231, 157, '2021-10-15', 5.8);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20081, 3234, 194, '2021-11-02', 4);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20082, 3244, 135, '2021-11-03', 240);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20083, 3225, 120, '2021-11-07', 12);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20088, 3253, 120, '2021-12-29', 12);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20091, 3243, 172, '2022-01-20', 0);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20095, 3239, 136, '2022-02-21', 0);
-insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,ValNum) values (20096, 3247, 179, '2022-02-20', 14);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20001, 3225, 120, '2020-01-11', 12);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20005, 3231, 127, '2020-02-23', 120);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20006, 3247, 157, '2020-02-14', 2.3);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20010, 3257, 179, '2020-03-18', 30);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20022, 3233, 166, '2020-07-05', 10);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20029, 3223, 115, '2020-09-04', 170);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20041, 3249, 155, '2020-12-16', 60);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20042, 3251, 140, '2020-12-19', 1);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20043, 3232, 172, '2020-12-27', 1);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20046, 3264, 135, '2021-01-05', 240);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20047, 3247, 135, '2021-01-13', 240);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20048, 3263, 155, '2021-01-08', 58);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20049, 3239, 139, '2021-01-10', 13);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20050, 3247, 135, '2021-01-27', 238);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20060, 3228, 139, '2021-05-19', 13);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20061, 3234, 177, '2021-05-27', 15);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20062, 3235, 153, '2021-05-25', 150);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20063, 3224, 179, '2021-05-26', 24);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20064, 3264, 136, '2021-06-03', 1);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20068, 3232, 185, '2021-07-01', 1);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20077, 3263, 166, '2021-09-30', 10);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20078, 3231, 157, '2021-10-15', 5.8);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20081, 3234, 194, '2021-11-02', 4);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20082, 3244, 135, '2021-11-03', 240);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20083, 3225, 120, '2021-11-07', 12);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20088, 3253, 120, '2021-12-29', 12);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20091, 3243, 172, '2022-01-20', 0);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20095, 3239, 136, '2022-02-21', 0);
+insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20096, 3247, 179, '2022-02-20', 14);
 
 -------------------VitalSignDetails----------------------------
 insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (1, 'BP Systolic' , 'mm/hg');
