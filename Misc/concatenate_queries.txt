@@ -37,3 +37,14 @@
 
 -----LabResults-------
 =concatenate("insert into LabResults(", "PatEncID,", " HealthCareProviderID,"," TestID,"," StoreTime", ValNum) values (", A2, ", ", B2, ", ", C2,", ", "'"& TEXT(D2, "yyyy-mm-dd") &"'", ", ", E2,  ");")	
+
+
+
+------------MedicationDetails----------
+
+=concatenate("insert into MedicationDetails(", ",", " HealthCareProviderID,"," TestID,"," StoreTime", ValNum) values (", A2, ", ", B2, ", ", C2,", ", "'"& TEXT(D2, "yyyy-mm-dd") &"'", ", ", E2,  ");")
+
+
+-----------------Prescription----------
+
+=concatenate("insert into Prescription(", "PrescriptionID,", " MedID,", " PatEncID,", " HealthCareProviderID,", " PrescStartDate,", " PrescEndDate,", " PrescDose,", "PrescQty) values (", A2, ", ", B2, ", ", C2, ", ", D2, ", ", "'"& TEXT(E2, "yyyy-mm-dd") &"'",", ","'"& TEXT(F2, "yyyy-mm-dd") &"'",", ", G2,", ", H2, ");")	
