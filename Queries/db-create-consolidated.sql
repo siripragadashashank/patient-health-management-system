@@ -191,8 +191,7 @@ EPOCPhoneNo BIGINT
 
 create table InsuranceProvider
 (
-InsuranceProviderID int primary key,
+InsuranceID int primary key,
 PatID INT NOT NULL REFERENCES Patient(PatID),
-InsuranceProviderName VARCHAR(45),
-PatientInsuranceNo Int
+InsuranceProviderName VARCHAR(45)
 );
