@@ -48,3 +48,8 @@
 -----------------Prescription----------
 
 =concatenate("insert into Prescription(", "PrescriptionID,", " MedID,", " PatEncID,", " HealthCareProviderID,", " PrescStartDate,", " PrescEndDate,", " PrescDose,", "PrescQty) values (", A2, ", ", B2, ", ", C2, ", ", D2, ", ", "'"& TEXT(E2, "yyyy-mm-dd") &"'",", ","'"& TEXT(F2, "yyyy-mm-dd") &"'",", ", G2,", ", H2, ");")	
+
+
+-----------Billing---------
+
+=concatenate("insert into Billing(", "BillingID,", " PatEncID,", " PaymentStatus,", " OrderTotal,", " ClaimSanctionAmt) values (", A2, ", ", B2, ", ", "'"& C2 &"'" ,", ", D2, ", ", E2, ");")	
