@@ -43,6 +43,7 @@ State VARCHAR(45),
 ZipCode INT,
 PhoneNo BIGINT, 
 EmailAddress VARCHAR(45),
+Age AS DATEDIFF(hour,DoB,GETDATE())/8766
 );
 
 
