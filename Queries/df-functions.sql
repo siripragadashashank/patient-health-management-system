@@ -38,15 +38,23 @@ SELECT * FROM PatientDetails;
 
 
 
-----------------View to get all the details of Patient(Demographic Details, Vaccination, EPOC, InsuranceProvider) -----------------------------
+---------------- View to get all the PatientEncounter level details (Symptoms, Diagnosis, LabResults, Vitals) -----------------------------
 drop view PatientEncounterDetails 
 
-CREATE VIEW PatientDetails AS SELECT 
-pat.PatID, pat.FirstName, pat.LastName, pat.DoB, pat.Street, pat.City, pat.State, pat.ZipCode, pat.PhoneNo, pat.EmailAddress,
-patdemo.Gender, patdemo.Ethnicity, patdemo.MaritalStatus, patdemo.EmploymentStatus,
-ins.InsuranceID, ins.InsuranceProviderName,
-epoc.EPOCID, epoc.EPOCFirstName, epoc.EPOCLastName, epoc.EPOCPhoneNo 
-FROM PHMS.dbo.Patient pat 
+CREATE VIEW PatientEncounterDetails AS SELECT 
+patenc.PatEncID,
+patenc.PatID,
+patenc.HealthCareProviderID,
+patenc.PatEncAdmitDate,
+patenc.AdmitType,
+patenc.AdmitLocation,
+patenc.PatEncDiscDate,
+patenc.DiscLocation,
+
+
+
+
+FROM PHMS.dbo.PatientEncounter patenc 
 JOIN PHMS.dbo.PatientDemographics patdemo
     ON pat.PatID = patdemo.PatID
 JOIN PHMS.dbo.EPOC epoc
@@ -54,3 +62,6 @@ JOIN PHMS.dbo.EPOC epoc
 Join PHMS.dbo.InsuranceProvider ins
 	on pat.PatID = ins.PatID
 
+
+
+select 'patenc.'+COLUMN_NAME+',' from information_schema.columns where table_name = 'PatientEncounter'
