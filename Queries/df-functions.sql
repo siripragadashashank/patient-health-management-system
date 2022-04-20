@@ -94,26 +94,7 @@ ADD LengthOfStay AS (dbo.fn_CalculateLengthOfStay(PatEncID));
 select * from dbo.PatientEncounter
 
 -----------------Computed Column OrderAmt based on function to consolidate Labs and Prescription amounts--------------------
-
---Select 
-----PatID
---patenc.PatEncID 
---, isnull(cast(lrd.TestID as varchar), 'N/A') as Tests
---, isnull(sum(lrd.Price), 0) as TotalLabOrder
---, isnull(cast(meds.MedID as varchar), 'N/A') as Meds
---, isnull(sum(meds.MedPrice), 0) as TotalMedOrder
---from PatientEncounter patenc
---left join LabResults lr 
---on  patenc.PatEncID = lr.PatEncID
---left join LabResultDetails lrd 
---on lr.TestID = lrd.TestID
---left join Prescription ps 
---on patenc.PatEncID = ps.PatEncID
---left join MedicationDetails meds 
---on ps.MedID = meds.MedID
---group by patenc.PatEncID, lrd.TestID, meds.MedID
 	
-
 drop function fn_CalculateOrderAmt
 
 create function fn_CalculateOrderAmt(@PatEncID int)
