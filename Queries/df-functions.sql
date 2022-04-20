@@ -162,7 +162,7 @@ as
 			(
 			Select 
 			patenc.PatEncID,
-			sum(lrd.Price)+ sum(meds.MedPrice) as Price 
+			isnull(sum(lrd.Price), 0)+ sum(meds.MedPrice) as Price 
 			from PatientEncounter patenc
 			left join LabResults lr 
 				on  patenc.PatEncID = lr.PatEncID
@@ -176,7 +176,6 @@ as
 			)a
 			where a.PatEncID = @PatEncID
 			); 
-		SET @OrderAmt = ISNULL(@OrderAmt, 0);
 		return @OrderAmt;
 	end
 
@@ -217,7 +216,7 @@ alter table PatientEncounter add CONSTRAINT ckAdmit CHECK (dbo.checkAdmitPhysc (
 
 -----------Testing for Admit Physician constraint----
 
--------- 3215 Hospital pharmacist (Cannot Admit a Patient)
+-------- 3215 Hospital pharmacist (Cannot Admit a Patient)----------
 
 insert into PatientEncounter(PatEncID, PatID, HealthCareProviderID, PatEncAdmitDate, AdmitType, AdmitLocation, PatEncDiscDate, DiscLocation) values (20111, 130, 3215, '2022-04-07', 'Emergency', 'Intensive Care Unit (ICU)', NULL, NULL);
 
@@ -231,13 +230,23 @@ returns BIT
 begin
    declare @flag BIT;
    declare @des varchar(40);
-   if exists (select Designation from HealthCareProvider where HealthCareProviderID=@HealthcareProviderID AND Designation in ('Attending physician','Emergency physician','Surgeon','Resident Doctor'))
+   if exists (select Designation from HealthCareProvider where HealthCareProviderID=@HealthcareProviderID AND Designation in 
+   (
+		'Hospital pharmacist',
+		'Chief Medical Officer',
+		'Social worker',
+		'Physical therapist',
+		'Clinical Assitant',
+		'Anesthesiologist',
+		'Pathologist',
+		'Chief executive officer'
+   ))
    begin
-       set @flag = 1
+       set @flag = 0
    end
    else 
 	   begin
-		   set @flag = 0
+		   set @flag = 1
 	   end
 return @flag
 end
@@ -248,7 +257,43 @@ drop constraint ckDiagnosis
 
 alter table Diagnosis add CONSTRAINT ckDiagnosis CHECK (dbo.checkDiagnosingPhysc (HealthCareProviderID) =1);
 
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20099, 3215, 46);
 
 
+--------Trigger to check and Update PaymentStatus based on OrderTotal and ClaimSanctionAmt---------------------------
 
-----
+drop trigger tr_UpdatePaymentStatus
+
+Create trigger tr_UpdatePaymentStatus
+on Billing
+after INSERT, UPDATE, DELETE
+As begin
+declare @OrderAmt money = 0;
+declare @PatEncID varchar(20);
+declare @ClaimAmt money = 0;
+declare @status varchar(40);
+select @PatEncID = isnull (i.PatEncID, d.PatEncID)
+   from inserted i full join deleted d 
+   on i.PatEncID = d.PatEncID;
+select @OrderAmt = OrderTotal,
+		@ClaimAmt=ClaimSanctionAmt
+   from Billing
+       where PatEncID = @PatEncID;
+if @ClaimAmt <= (@OrderAmt*0.7)
+set @status = 'Follow up required'
+else if @ClaimAmt > (@OrderAmt*0.7) AND @ClaimAmt <= (@OrderAmt)
+set @status = 'Partial Payment Received'
+else 
+set @status = 'Complete Payment Received'
+update Billing
+set PaymentStatus = @status
+where PatEncID = @PatEncID
+end
+
+
+--insert into Billing(BillingID, PatEncID, PaymentStatus, ClaimSanctionAmt) values (7212, 20002, NULL, 60);
+
+
+--insert into Billing(BillingID, PatEncID, PaymentStatus, ClaimSanctionAmt) values (700451, 20001, 'Yes', 60);
+
+Select * from Billing
