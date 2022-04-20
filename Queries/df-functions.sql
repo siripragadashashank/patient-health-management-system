@@ -22,37 +22,91 @@ SELECT * FROM PatientDetails;
 
 
 
----------------- View to get all the PatientEncounter level details (Symptoms, Diagnosis, LabResults, Vitals) -----------------------------
-drop view PatientEncounterDetails 
+---------------- View to get all the PatientEncounter level Symptom and Diagnosis details -----------------------------
 
-CREATE VIEW PatientEncounterDetails AS SELECT 
+drop view PatientEncounterSymDiagDetails 
+
+CREATE VIEW PatientEncounterSymDiagDetails AS SELECT 
 patenc.PatEncID,
 patenc.PatID,
 patenc.HealthCareProviderID,
 patenc.PatEncAdmitDate,
 patenc.AdmitType,
 patenc.AdmitLocation,
-patenc.PatEncDiscDate,
-patenc.DiscLocation,
-
-
-
-
+patenc.PatEncDiscDate
+, patenc.DiscLocation
+, symp.SymCode
+, sympd.SymName
+, diag.DxCode
+, diagd.DxName
 FROM PHMS.dbo.PatientEncounter patenc 
-JOIN PHMS.dbo.PatientDemographics patdemo
-    ON pat.PatID = patdemo.PatID
-JOIN PHMS.dbo.EPOC epoc
-	on pat.PatID = epoc.PatID
-Join PHMS.dbo.InsuranceProvider ins
-	on pat.PatID = ins.PatID
+left JOIN PHMS.dbo.Symptoms symp
+    ON patenc.PatEncID = symp.PatEncID
+left JOIN PHMS.dbo.SymptomDetails sympd
+	on symp.SymCode = sympd.SymCode
+left JOIN PHMS.dbo.Diagnosis diag
+    ON patenc.PatEncID = diag.PatEncID
+left JOIN PHMS.dbo.DiagnosisDetails diagd
+	on diag.DxCode = diagd.DxCode
 
 
+Select * from PatientEncounterSymDiagDetails
 
-select 'patenc.'+COLUMN_NAME+',' from information_schema.columns where table_name = 'PatientEncounter'
+--------------------View to get all the PatientEncounter level LabResults and VitalSigns details----------------
+
+
+drop view PatientEncounterLabVitals 
+
+CREATE VIEW PatientEncounterLabVitals AS SELECT 
+patenc.PatEncID,
+patenc.AdmitType,
+patenc.AdmitLocation
+, isnull(lrd.TestName, 'N/A') as TestName
+, isnull(lr.val, 0) as LabValue
+, vsd.VitalName
+, ( cast(vs.VitalVal as varchar) + ' ' + vsd.VitalUnit) as VitalValue
+FROM PHMS.dbo.PatientEncounter patenc 
+left JOIN PHMS.dbo.LabResults lr
+    ON patenc.PatEncID = lr.PatEncID
+left JOIN PHMS.dbo.LabResultDetails lrd
+	on lr.TestID = lrd.TestID
+left JOIN PHMS.dbo.VitalSigns vs
+    ON patenc.PatEncID = vs.PatEncID
+left JOIN PHMS.dbo.VitalSignDetails vsd
+	on vs.VitalID = vsd.VitalID
+
+
+Select * from PatientEncounterLabVitals
+
+
+---------------- View to get all the PatientEncounter level Billing details -----------------------------
+
+drop view PatientEncounterBilling 
+
+CREATE VIEW PatientEncounterBilling AS SELECT 
+patenc.PatEncID,
+isnull(sum(lrd.Price), 0) as LabOrderAmt,
+isnull(sum(meds.MedPrice), 0) as MedOrderAmt,
+isnull(sum(lrd.Price), 0)+sum(meds.MedPrice) as OrderAmt
+from PatientEncounter patenc
+left join LabResults lr 
+	on  patenc.PatEncID = lr.PatEncID
+left join LabResultDetails lrd 
+	on lr.TestID = lrd.TestID
+left join Prescription ps 
+	on patenc.PatEncID = ps.PatEncID
+left join MedicationDetails meds 
+	on ps.MedID = meds.MedID
+group by patenc.PatEncID
+
+
+Select * from PatientEncounterBilling
+
 
 
 
 -------------------Computed Column Age based on function to Calculate Patient Age --------------------
+
 drop function fn_CalculateAge;
 
 CREATE FUNCTION fn_CalculateAge(@PatID int) 
@@ -93,11 +147,11 @@ ADD LengthOfStay AS (dbo.fn_CalculateLengthOfStay(PatEncID));
 
 select * from dbo.PatientEncounter
 
------------------Computed Column OrderAmt based on function to consolidate Labs and Prescription amounts--------------------
+-----------------Computed Column OrderTotal based on function to consolidate Labs and Prescription amounts--------------------
 	
-drop function fn_CalculateOrderAmt
+drop function fn_CalculateOrderTotal
 
-create function fn_CalculateOrderAmt(@PatEncID int)
+create function fn_CalculateOrderTotal(@PatEncID int)
 returns double precision
 as
 	begin
@@ -127,14 +181,17 @@ as
 	end
 
 alter table dbo.Billing
-Add OrderTotal as (dbo.fn_CalculateOrderAmt(PatEncID));
+Add OrderTotal as (dbo.fn_CalculateOrderTotal(PatEncID));
 
 Select * from Billing
 
+-----Test for OrderTotal
 
-----------------
+--insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20001, 3247, 179, '2020-01-11', 14);
 
-USE PHMS;
+
+----------------Table level CHECK constraint on Admitting Physician----------
+drop function checkAdmitPhysc
 
 create function checkAdmitPhysc (@HealthcareProviderID int)
 returns BIT
@@ -143,19 +200,55 @@ begin
    declare @des varchar(40);
    if exists (select Designation from HealthCareProvider where HealthCareProviderID=@HealthcareProviderID AND Designation in ('Attending physician','Emergency physician','Surgeon','Resident Doctor'))
    begin
-   set @flag = 1
+       set @flag = 1
    end
    else 
-   begin
-   set @flag = 0
-   end
+	   begin
+		   set @flag = 0
+	   end
 return @flag
 end
 
-
-drop function checkAdmitPhysc
 
 alter table PatientEncounter
 drop constraint ckAdmit
 
 alter table PatientEncounter add CONSTRAINT ckAdmit CHECK (dbo.checkAdmitPhysc (HealthCareProviderID) =1);
+
+-----------Testing for Admit Physician constraint----
+
+-------- 3215 Hospital pharmacist (Cannot Admit a Patient)
+
+insert into PatientEncounter(PatEncID, PatID, HealthCareProviderID, PatEncAdmitDate, AdmitType, AdmitLocation, PatEncDiscDate, DiscLocation) values (20111, 130, 3215, '2022-04-07', 'Emergency', 'Intensive Care Unit (ICU)', NULL, NULL);
+
+
+
+----------------Table level CHECK constraint on Diagnosing Physician----------
+drop function checkDiagnosingPhysc
+
+create function checkDiagnosingPhysc(@HealthcareProviderID int)
+returns BIT
+begin
+   declare @flag BIT;
+   declare @des varchar(40);
+   if exists (select Designation from HealthCareProvider where HealthCareProviderID=@HealthcareProviderID AND Designation in ('Attending physician','Emergency physician','Surgeon','Resident Doctor'))
+   begin
+       set @flag = 1
+   end
+   else 
+	   begin
+		   set @flag = 0
+	   end
+return @flag
+end
+
+
+alter table Diagnosis
+drop constraint ckDiagnosis
+
+alter table Diagnosis add CONSTRAINT ckDiagnosis CHECK (dbo.checkDiagnosingPhysc (HealthCareProviderID) =1);
+
+
+
+
+----
