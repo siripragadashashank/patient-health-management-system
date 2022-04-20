@@ -52,4 +52,4 @@
 
 -----------Billing---------
 
-=concatenate("insert into Billing(", "BillingID,", " PatEncID,", " PaymentStatus,", " OrderTotal,", " ClaimSanctionAmt) values (", A2, ", ", B2, ", ", "'"& C2 &"'" ,", ", D2, ", ", E2, ");")	
+=concatenate("insert into Billing(", "BillingID,", " PatEncID,", " PaymentStatus,", " ClaimSanctionAmt) values (", A2, ", ", B2, ", ", "'"& C2 &"'" ,", ", E2, ");")	
