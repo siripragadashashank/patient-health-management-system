@@ -386,6 +386,7 @@ insert into PatientEncounter(PatEncID, PatID, HealthCareProviderID, PatEncAdmitD
 
 
 
+
 ----- SymptomDetails---
 
 
@@ -873,9 +874,7 @@ insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) va
 insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20095, 3239, 136, '2022-02-21', 0);
 insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20096, 3247, 179, '2022-02-20', 14);
 
-----
 
---insert into LabResults(PatEncID, HealthCareProviderID, TestID, StoreTime,Val) values (20001, 3247, 179, '2020-01-11', 14);
 
 -------------------VitalSignDetails----------------------------
 insert into VitalSignDetails (VitalID, VitalName, VitalUnit) values (1, 'BP Systolic' , 'mm/hg');

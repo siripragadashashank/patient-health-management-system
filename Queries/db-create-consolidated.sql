@@ -43,7 +43,6 @@ State VARCHAR(45),
 ZipCode INT,
 PhoneNo BIGINT, 
 EmailAddress VARCHAR(45)
---Age AS DATEDIFF(hour,DoB,GETDATE())/8766
 );
 
 
@@ -66,7 +65,6 @@ AdmitType VARCHAR(45),
 AdmitLocation VARCHAR(45),
 PatEncDiscDate DATETIME,
 DiscLocation VARCHAR(45)
---, LengthOfStay as isnull(DATEDIFF(day, PatEncAdmitDate, PatEncDiscDate), DATEDIFF(day, PatEncAdmitDate, getdate()))
 );
 
 
@@ -156,7 +154,6 @@ CREATE TABLE Billing
 BillingID INT PRIMARY KEY, 
 PatEncID INT NOT NULL
 REFERENCES PatientEncounter(PatEncID),
---OrderTotal DOUBLE PRECISION,
 PaymentStatus VARCHAR(45),
 ClaimSanctionAmt DOUBLE PRECISION
 );
