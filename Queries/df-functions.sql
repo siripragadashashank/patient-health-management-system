@@ -130,3 +130,34 @@ alter table dbo.Billing
 Add OrderTotal as (dbo.fn_CalculateOrderAmt(PatEncID));
 
 Select * from Billing
+
+
+----------------
+
+USE PHMS;
+
+drop function checkAdmitPhysc
+
+create function checkAdmitPhysc (@HealthcareProviderID int)
+returns BIT
+begin
+   declare @flag BIT;
+   declare @des varchar(40);
+   if exists (select Designation from HealthCareProvider where HealthCareProviderID=@HealthcareProviderID AND Designation in ('Attending physician','Emergency physician','Surgeon','Resident Doctor'))
+	   begin
+		set @flag = 1
+	   end
+   else 
+	   begin
+		   set @flag = 0
+		   --RAISERROR('HealthcareProvider %d is not a valid admitting Physician',1,1)
+		   --PRINT('Raise the caught error again');
+	   end
+return @flag
+end
+
+alter table PatientEncounter add CONSTRAINT  ckAdmitPhyscian  CHECK (dbo.checkAdmitPhysc (HealthCareProviderID) =1);
+
+
+ALTER TABLE PatientEncounter
+DROP CONSTRAINT ckAdmitPhyscian; 
