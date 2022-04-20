@@ -136,28 +136,26 @@ Select * from Billing
 
 USE PHMS;
 
-drop function checkAdmitPhysc
-
 create function checkAdmitPhysc (@HealthcareProviderID int)
 returns BIT
 begin
    declare @flag BIT;
    declare @des varchar(40);
    if exists (select Designation from HealthCareProvider where HealthCareProviderID=@HealthcareProviderID AND Designation in ('Attending physician','Emergency physician','Surgeon','Resident Doctor'))
-	   begin
-		set @flag = 1
-	   end
+   begin
+   set @flag = 1
+   end
    else 
-	   begin
-		   set @flag = 0
-		   --RAISERROR('HealthcareProvider %d is not a valid admitting Physician',1,1)
-		   --PRINT('Raise the caught error again');
-	   end
+   begin
+   set @flag = 0
+   end
 return @flag
 end
 
-alter table PatientEncounter add CONSTRAINT  ckAdmitPhyscian  CHECK (dbo.checkAdmitPhysc (HealthCareProviderID) =1);
 
+drop function checkAdmitPhysc
 
-ALTER TABLE PatientEncounter
-DROP CONSTRAINT ckAdmitPhyscian; 
+alter table PatientEncounter
+drop constraint ckAdmit
+
+alter table PatientEncounter add CONSTRAINT ckAdmit CHECK (dbo.checkAdmitPhysc (HealthCareProviderID) =1);
