@@ -51,8 +51,8 @@ left JOIN PHMS.dbo.DiagnosisDetails diagd
 
 Select * from PatientEncounterSymDiagDetails
 
---------------------View to get all the PatientEncounter level LabResults and VitalSigns details----------------
-
+--------------------View to get all the PatientEncounter 
+----------------level LabResults and VitalSigns details----------------
 
 drop view PatientEncounterLabVitals 
 
@@ -73,7 +73,6 @@ left JOIN PHMS.dbo.VitalSigns vs
     ON patenc.PatEncID = vs.PatEncID
 left JOIN PHMS.dbo.VitalSignDetails vsd
 	on vs.VitalID = vsd.VitalID
-
 
 Select * from PatientEncounterLabVitals
 
@@ -104,7 +103,7 @@ Select * from PatientEncounterBilling
 
 
 
--------------------Computed Column Age based on function to Calculate Patient Age --------------------
+----Computed Column Age based on function to Calculate Patient Age ------------
 
 drop function fn_CalculateAge;
 
@@ -126,7 +125,8 @@ Add Age as (dbo.fn_CalculateAge(PatID));
 
 select * from Patient
 
------------Computed column LengthOfStay based on function to Calculate LengthOfStay of a Patient Encounter-------------
+---Computed column LengthOfStay based on 
+---function to Calculate LengthOfStay of a Patient Encounter-------------
 
 drop function fn_CalculateLengthOfStay
 
@@ -135,9 +135,12 @@ RETURNS INT
 AS
    BEGIN
       DECLARE @los int =
-         (SELECT isnull(DATEDIFF(day, PatEncAdmitDate, PatEncDiscDate), DATEDIFF(day, PatEncAdmitDate, GETDATE())) as LengthOfStay
+         (
+		  SELECT isnull(DATEDIFF(day, PatEncAdmitDate, PatEncDiscDate), 
+		  DATEDIFF(day, PatEncAdmitDate, GETDATE())) as LengthOfStay
           FROM PHMS.dbo.PatientEncounter patenc
-          WHERE PatEncID = @PatEncID);
+          WHERE PatEncID = @PatEncID
+		 );
       RETURN @los;
 END
 
@@ -146,7 +149,8 @@ ADD LengthOfStay AS (dbo.fn_CalculateLengthOfStay(PatEncID));
 
 select * from dbo.PatientEncounter
 
------------------Computed Column OrderTotal based on function to consolidate Labs and Prescription amounts--------------------
+---Computed Column OrderTotal based on 
+---function to consolidate Labs and Prescription amounts--------------------
 	
 drop function fn_CalculateOrderTotal
 
