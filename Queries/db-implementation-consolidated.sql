@@ -229,8 +229,7 @@ begin
     RETURN @age;
 end
 
-alter table dbo.Patient
-Add Age as (dbo.fn_CalculateAge(PatID));
+alter table dbo.Patient Add Age as (dbo.fn_CalculateAge(PatID));
 
 
 --------------Computed column LengthOfStay based on----------
@@ -1663,16 +1662,15 @@ Select * from PatientEncounter
 Select * from Billing
 
 
------------Testing for Admit Physician constraint----
-
--------- 3215 Hospital pharmacist (Cannot Admit a Patient)----------
+-----------Testing for Table level check constraint for Admit Physician----
+-------- 3215 is a Hospital pharmacist (Cannot Admit a Patient)----------
 
 insert into PatientEncounter(PatEncID, PatID, HealthCareProviderID, PatEncAdmitDate, AdmitType, AdmitLocation, PatEncDiscDate, DiscLocation) values (20111, 130, 3215, '2022-04-07', 'Emergency', 'Intensive Care Unit (ICU)', NULL, NULL);
 
----------Test for Table level check for Diagnosing Physician
--------- 3215 Hospital pharmacist (Cannot Diagnose a Patient)----------
+---------Testing for Table level check for Diagnosing Physician----
+-------- 3219 Social worker (Cannot Diagnose a Patient)----------
 
-insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20099, 3215, 46);
+insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20099, 3219, 46);
 
 
 ----------------View for details of Patient(Demographic Details, EPOC, InsuranceProvider)-------
