@@ -1,7 +1,7 @@
 use PHMS;
 
 
-----------------View to get all the details of Patient (Demographic Details, Vaccination, EPOC, InsuranceProvider)-------
+----------------View for details of Patient(Demographic Details, EPOC, InsuranceProvider)-------
 
 drop view PatientDetails 
 
@@ -48,7 +48,6 @@ left JOIN PHMS.dbo.Diagnosis diag
     ON patenc.PatEncID = diag.PatEncID
 left JOIN PHMS.dbo.DiagnosisDetails diagd
 	on diag.DxCode = diagd.DxCode
-
 
 Select * from PatientEncounterSymDiagDetails
 
