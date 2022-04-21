@@ -59,7 +59,8 @@ EmpContactNo BIGINT
 (
 PatEncID INT PRIMARY KEY, 
 PatID INT NOT NULL REFERENCES Patient(PatID),
-HealthCareProviderID INT NOT NULL REFERENCES HealthCareProvider(HealthCareProviderID),
+HealthCareProviderID INT NOT NULL 
+REFERENCES HealthCareProvider(HealthCareProviderID),
 PatEncAdmitDate DateTime,
 AdmitType VARCHAR(45),
 AdmitLocation VARCHAR(45),
@@ -73,7 +74,6 @@ CREATE TABLE SymptomDetails
 SymCode INT PRIMARY KEY, 
 SymName VARCHAR(45)
 );
-
 
 CREATE TABLE Symptoms
 (
@@ -92,7 +92,8 @@ DxName varchar(45)
 create table Diagnosis
 (
 PatEncID int not null references PatientEncounter(PatEncID),
-HealthCareProviderID int not null references HealthCareProvider(HealthCareProviderID),
+HealthCareProviderID int not null 
+references HealthCareProvider(HealthCareProviderID),
 DxCode int not null references DiagnosisDetails(DxCode)
 );
 
@@ -107,7 +108,8 @@ Price DOUBLE PRECISION
 CREATE TABLE LabResults
 (
 PatEncID INT NOT NULL REFERENCES PatientEncounter(PatEncID), 
-HealthCareProviderID INT NOT NULL REFERENCES HealthCareProvider(HealthCareProviderID),
+HealthCareProviderID INT NOT NULL 
+REFERENCES HealthCareProvider(HealthCareProviderID),
 TestID INT NOT NULL REFERENCES LabResultDetails(TestID),
 StoreTime Date,
 Val double precision
@@ -142,7 +144,8 @@ MedPrice DOUBLE PRECISION
 PrescriptionID INT PRIMARY KEY, 
 MedID INT NOT NULL REFERENCES MedicationDetails(MedID),
 PatEncID INT NOT NULL REFERENCES PatientEncounter(PatEncID),
-HealthCareProviderID INT NOT NULL REFERENCES HealthCareProvider(HealthCareProviderID),
+HealthCareProviderID INT NOT NULL 
+REFERENCES HealthCareProvider(HealthCareProviderID),
 PrescStartDate DATETIME,
 PrescEndDate DATETIME,
 PrescDose FLOAT,
