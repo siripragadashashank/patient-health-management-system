@@ -200,7 +200,10 @@ returns BIT
 begin
    declare @flag BIT;
    declare @des varchar(40);
-   if exists (select Designation from HealthCareProvider where HealthCareProviderID=@HealthcareProviderID AND Designation in ('Attending physician','Emergency physician','Surgeon','Resident Doctor'))
+   if exists (select Designation from HealthCareProvider 
+			where HealthCareProviderID=@HealthcareProviderID AND 
+			Designation in ('Attending physician','Emergency physician',
+							'Surgeon','Resident Doctor'))
    begin
        set @flag = 1
    end
@@ -233,7 +236,8 @@ returns BIT
 begin
    declare @flag BIT;
    declare @des varchar(40);
-   if exists (select Designation from HealthCareProvider where HealthCareProviderID=@HealthcareProviderID AND Designation in 
+   if exists (select Designation from HealthCareProvider 
+   where HealthCareProviderID=@HealthcareProviderID AND Designation in 
    (
 		'Hospital pharmacist',
 		'Chief Medical Officer',
