@@ -1678,7 +1678,7 @@ insert into Diagnosis( PatEncID, HealthCareProviderID, DxCode) values (20099, 32
 
 CREATE VIEW PatientDetails AS SELECT 
 pat.PatID, pat.FirstName, pat.LastName, pat.DoB, pat.Street, 
-pat.City, pat.State, pat.ZipCode, pat.PhoneNo, pat.EmailAddress,
+pat.City, pat.State, pat.ZipCode, pat.PhoneNo, pat.EmailAddress, pat.Age,
 patdemo.Gender, patdemo.Ethnicity, patdemo.MaritalStatus, patdemo.EmploymentStatus,
 ins.InsuranceProviderName, epoc.EPOCFirstName, epoc.EPOCLastName, epoc.EPOCPhoneNo 
 FROM PHMS.dbo.Patient pat 
