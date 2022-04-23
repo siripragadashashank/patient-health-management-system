@@ -381,7 +381,7 @@ select @OrderAmt = OrderTotal,
 			PRINT 'PaymentStatus set as - Follow up required'
 		end
 
-	else if @ClaimAmt > (@OrderAmt*0.7) AND @ClaimAmt <= (@OrderAmt*0.9)
+	else if @ClaimAmt > (@OrderAmt*0.7) AND @ClaimAmt < (@OrderAmt)
 		begin
 			set @status = 'Partial Payment Received'
 			PRINT 'PaymentStatus set as - Partial Payment Received'
